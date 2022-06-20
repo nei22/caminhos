@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de teste</title>
+    <title>Página-Inicial</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: lightblue;
+            width: 50vw;
+            margin: auto auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Teste</h1>
+    <h1>Cadastre seu e-mail</h1>
     <form action="/teste" method="post">
-        <input  id="inputText" type="text" placeholder="digite um texto">
-        <button  type="submit">submit</button>
+        <label for="texto">E-mail</label>
+        <input  id="inputText" type="email" placeholder="digite seu e-mail">
+        <button>submit</button>
     </form>
     <p id="text"></p>
     <!-- <script src=""></script> -->
