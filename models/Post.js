@@ -1,5 +1,7 @@
+// importando database
 const db = require('./db')
 
+// criando tabela de postagens
 const Post = db.sequelize.define('postagens', {
     titulo: {
         type: db.Sequelize.STRING

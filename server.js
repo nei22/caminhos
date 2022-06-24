@@ -5,7 +5,6 @@ const app = express()
 const hbs = require('express-handlebars')
 const port = 3000
 
-
 // config
 // body parser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -20,8 +19,8 @@ app.engine('hbs', hbs.engine({
         allowProtoPropertiesByDefault: true,
         allowProtoMethodsByDefault: true,
     }
-
 }))
+
 app.set('view engine', 'hbs')
 
 // Rotas
@@ -31,10 +30,10 @@ app.get('/list', (req, res) => {
 
     })
 })
+
 app.get('/', (req, res) => {
     res.render('index')
 })
-
 
 app.post('/cad', (req, res) => {
     Post.create({
@@ -47,6 +46,7 @@ app.post('/cad', (req, res) => {
     })
 })
 
+// escutador
 app.listen(port, () => {
     console.log(`listening in http://localhost:${port}`);
 })
