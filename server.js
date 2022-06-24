@@ -42,7 +42,14 @@ app.post('/cad', (req, res) => {
     }).then(() => {
         res.redirect('/list')
     }).catch((erro) => {
-        res.send('Eroo encontrado: ' + erro)
+        res.send('Erro encontrado: ' + erro)
+    })
+})
+app.get('/deletar/:id', (req, res)=>{
+    Post.destroy({where: {id:req.params.id}}).then(()=>{
+        res.send('Postagem deletada com sucesso!!')
+    }).catch((erro)=>{
+        res.send('Esta postagem não existe!!'+ erro)
     })
 })
 
